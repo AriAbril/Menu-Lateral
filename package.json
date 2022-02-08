@@ -1,0 +1,22 @@
+{
+  "name": "menu-lateral",
+  "version": "1.0.0",
+  "description": "Menú lateral con HTML, SCSS, CSS y JSON",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass -watch --output-style expanded --precision 6 src/assets/scss/style.scss -o dist/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"HTML\"",
+    "\"SCSS\"",
+    "\"CSS\"",
+    "\"JSON\"",
+    "\"node-sass\""
+  ],
+  "author": "Ari Abril",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

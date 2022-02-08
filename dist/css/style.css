@@ -1,0 +1,263 @@
+/* Navbar */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css);
+/* line 1, src/assets/scss/_reset.scss */
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 7, src/assets/scss/_reset.scss */
+*:before, *:after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 7, src/assets/scss/style.scss */
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(/dist/img/banner.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* line 13, src/assets/scss/style.scss */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+/* sidenav */
+/* line 20, src/assets/scss/style.scss */
+.sidenav {
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  background-color: #ff55ff;
+  z-index: 1;
+  transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -webkit-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+}
+
+/* line 28, src/assets/scss/style.scss */
+.sidenav img {
+  display: block;
+  width: 120px;
+  margin: 10px auto;
+}
+
+/* line 34, src/assets/scss/style.scss */
+.sidenav h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* line 43, src/assets/scss/style.scss */
+.sidenav menu {
+  position: relative;
+  height: calc(100vh - 155px);
+  height: -moz-calc(100vh - 155px);
+  height: -webkit-calc(100vh - 155px);
+}
+
+/* line 47, src/assets/scss/style.scss */
+.sidenav menu ul {
+  list-style: none;
+  margin-top: 15px;
+  margin-left: 0;
+}
+
+/* line 52, src/assets/scss/style.scss */
+.sidenav menu ul li {
+  display: inline-block;
+  border-bottom: 1px solid #ff22ff;
+  letter-spacing: 1.2px;
+  width: 100%;
+}
+
+/* line 58, src/assets/scss/style.scss */
+.sidenav menu ul li a {
+  position: relative;
+  display: block;
+  padding: 15px 14px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+/* line 67, src/assets/scss/style.scss */
+.sidenav menu ul li a i {
+  font-size: 18px;
+  display: inline;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* line 75, src/assets/scss/style.scss */
+.sidenav menu ul li.active {
+  background-color: #ff2cff;
+}
+
+/* line 79, src/assets/scss/style.scss */
+.sidenav menu ul li:hover {
+  background-color: #ff2cff;
+}
+
+/* line 82, src/assets/scss/style.scss */
+.sidenav menu ul li:hover > .submenu {
+  width: 150px;
+}
+
+/* line 88, src/assets/scss/style.scss */
+.sidenav menu ul.submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-height: 100%;
+  margin-top: 0%;
+  z-index: 2;
+  width: 0px;
+  background-color: #ff55ff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 0.4s;
+  -moz-transition: width 0.4s;
+  -webkit-transition: width 0.4s;
+  -o-transition: width 0.4s;
+}
+
+/* line 101, src/assets/scss/style.scss */
+.sidenav menu ul.submenu a {
+  width: 150px;
+  padding: 12px;
+}
+
+/* line 105, src/assets/scss/style.scss */
+.sidenav menu ul.submenu a:hover {
+  background-color: #ff2cff;
+}
+
+/* line 113, src/assets/scss/style.scss */
+.sidenav button {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff55ff;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -webkit-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+}
+
+/* line 129, src/assets/scss/style.scss */
+.sidenav button:hover {
+  background-color: #ff7eff;
+  box-shadow: 0 3px 10px #ff7eff;
+}
+
+/* line 134, src/assets/scss/style.scss */
+.sidenav button .fa-bars {
+  display: none;
+}
+
+/* line 139, src/assets/scss/style.scss */
+.sidenav.closed {
+  transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+
+/* line 142, src/assets/scss/style.scss */
+.sidenav.closed button {
+  transform: translateX(150%);
+  -moz-transform: translateX(150%);
+  -webkit-transform: translateX(150%);
+  -ms-transform: translateX(150%);
+  -o-transform: translateX(150%);
+}
+
+/* line 145, src/assets/scss/style.scss */
+.sidenav.closed button .fa-bars {
+  display: block;
+}
+
+/* line 149, src/assets/scss/style.scss */
+.sidenav.closed button .fa-times {
+  display: none;
+}
+
+/* line 153, src/assets/scss/style.scss */
+.sidenav.closed ~ .overlay {
+  display: none;
+}
+
+/* line 160, src/assets/scss/style.scss */
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.65;
+  transition: display 0.4s;
+  -moz-transition: display 0.4s;
+  -webkit-transition: display 0.4s;
+  -o-transition: display 0.4s;
+}
+
+/* line 169, src/assets/scss/style.scss */
+.logo {
+  position: fixed;
+  right: 25px;
+  top: 15px;
+  width: 50px;
+}
+
+/* line 175, src/assets/scss/style.scss */
+.logo img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* line 182, src/assets/scss/style.scss */
+main {
+  width: 85%;
+  height: 80%;
+  align-self: center;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
